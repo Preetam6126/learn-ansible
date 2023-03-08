@@ -23,7 +23,7 @@
   tasks:
    - name: Play Variables Task
      vars: 
-     URL: task.example.com
+      URL: task.example.com
      ansible.builtin.debug:
       msg: URL = {{ URL }}
     
