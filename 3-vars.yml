@@ -21,9 +21,9 @@
 - name: Task level variables
   hosts: localhost
   tasks:
-- name: Play Variables Task
-    vars: 
-    URL: task.example.com
-    ansible.builtin.debug:
-    msg: URL = {{ URL }}
+   - name: Play Variables Task
+     vars: 
+     URL: task.example.com
+     ansible.builtin.debug:
+      msg: URL = {{ URL }}
     
