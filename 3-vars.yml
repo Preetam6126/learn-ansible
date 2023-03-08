@@ -33,3 +33,16 @@
    - name: Play Variables from Inventory    ##localhost ansible_user=centos ansible_password=DevOps321 URL=inventory.example.com in /tmp/inv
      ansible.builtin.debug:
       msg: URL = {{ URL }}
+      
+      ## command for the inventory--- ansible-playbook -i /tmp/inv 3-vars.yml 
+      ## command for the cli --- ansible-playbook -i /tmp/inv 3-vars.yml -e URL=cli.example.com
+
+- name: Inventory level variables
+  hosts: localhost
+  tasks:
+   - name: Play Variables from Inventory
+     ansible.builtin.debug:
+      msg: "URL = {{ URL }}, Hostname of Server = {{ ansible_hostname}}"
+
+      
+
