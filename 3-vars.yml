@@ -7,7 +7,7 @@
      ansible.builtin.debug:
         msg: URL = {{ URL }}
         
-      
+  ## vars_files only works on play level    
 - name: Play Variables from Files
   hosts: localhost
   vars_files:
@@ -17,3 +17,13 @@
      ansible.builtin.debug:
         msg: URL = {{ URL }}        
         
+        
+- name: Task level variables
+ hosts: localhost
+ tasks:
+  - name:Print task level variables
+ vars: 
+    URL: task.example.com
+    ansible.builtin.debug:
+    msg: URL = {{ URL }}
+    
