@@ -3,14 +3,8 @@
   vars:
     URL: play.example.com
   tasks:
-    - name: Print play variable
+    - name: print play variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
       
       
-      - name: Demo Play 1
-  hosts: all
-  tasks:
-   - name: Print Hello
-     ansible.builtin.debug:
-        msg: Hello World Testing Ansible!
