@@ -37,6 +37,7 @@
       ## command for the inventory--- ansible-playbook -i /tmp/inv 3-vars.yml 
       ## command for the cli --- ansible-playbook -i /tmp/inv 3-vars.yml -e URL=cli.example.com
 
+
 - name: Inventory level variables
   hosts: localhost
   tasks:
@@ -44,7 +45,7 @@
      ansible.builtin.debug:
       msg: "URL = {{ URL }}, Hostname of Server = {{ ansible_hostname}}"
       
-- name: Register Variable
+      - name: Register Variable
   hosts: localhost
   tasks:
     - name: Get Uptime Output
