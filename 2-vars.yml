@@ -5,4 +5,12 @@
   tasks:
     - name: Print play variable
       ansible.builtin.debug:
-      msg: URL = {{ URL }}
+        msg: URL = {{ URL }}
+      
+      
+      - name: Demo Play 1
+  hosts: all
+  tasks:
+   - name: Print Hello
+     ansible.builtin.debug:
+        msg: Hello World Testing Ansible!
