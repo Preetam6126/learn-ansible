@@ -19,10 +19,10 @@
         
         
 - name: Task level variables
- hosts: localhost
- tasks:
+  hosts: localhost
+  tasks:
   - name:Print task level variables
- vars: 
+  vars: 
     URL: task.example.com
     ansible.builtin.debug:
     msg: URL = {{ URL }}
