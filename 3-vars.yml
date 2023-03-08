@@ -56,5 +56,7 @@
       ansible.builtin.debug:
         msg: "{{ out }}"    ### not only for printing we can use it anywhere
 
-      
+    - name: Declare a Variable
+      ansible.builtin.set_fact:
+        status: "{{ out.rc }}"
 
