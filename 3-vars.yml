@@ -61,6 +61,9 @@
         status: "{{ out.rc }}"
         
     - name: Printing Declared variable
-      ansible.builtin.debug:
+      ansible.builtin.debug:yml
         msg: "{{ out.rc }}"
+        
+        
 
+    
