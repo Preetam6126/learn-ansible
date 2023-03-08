@@ -52,8 +52,8 @@
       ansible.builtin.shell: uptime
       register: out
       
-      - name: Accessing registered variable with print out
-        ansible.builtin.debug:
+    - name: Accessing registered variable with print out
+      ansible.builtin.debug:
         msg: "{{ out }}"    ### not only for printing we can use it anywhere
 
       
