@@ -43,6 +43,17 @@
    - name: Play Variables from Inventory
      ansible.builtin.debug:
       msg: "URL = {{ URL }}, Hostname of Server = {{ ansible_hostname}}"
+      
+- name: Register Variable
+  hosts: localhost
+  tasks:
+    - name: Get Uptime Output
+      ansible.builtin.shell: uptime
+      register: out
+      
+      - name: Accessing registered variable with print out
+        ansible.builtin.debug:
+        msg: "{{ out }}"    ### not only for printing we can use it anywhere
 
       
 
