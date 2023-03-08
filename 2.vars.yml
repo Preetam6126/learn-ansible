@@ -5,4 +5,4 @@
   tasks:
     - name: Print play variable
       ansible.builtin.debug:
-      msg: website = {{ URL }}
+      msg: URL = {{ URL }}
