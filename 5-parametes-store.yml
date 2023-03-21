@@ -3,4 +3,10 @@
   tasks:
     - name: Print test1 value
       ansible.builtin.debug:
-        msg: "{{ lookup('amazon.aws.aws_ssm', 'test1') }}"
+       # msg: "{{ lookup('amazon.aws.aws_ssm', 'test1') }}" #---- without region
+        msg: "{{ lookup('amazon.aws.aws_ssm', 'test1', region='us-east-1') }}"
+
+
+### actually if you run on any system two things to remember that is
+## 1) aws configure on the system
+## 2) region should mention in the script
