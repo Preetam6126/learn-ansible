@@ -3,6 +3,12 @@
   tasks:
     - name: Print fruit name
       debug:
-        msg: Fruit Name -Apple
+        msg: Fruit Name - {{ item }}
         
-    
+      loop:
+        - apple
+        - banana
+        - orange
+        - mango
+        
+# for i in Apple,Banana, do echo $i
