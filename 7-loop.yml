@@ -11,4 +11,12 @@
         - orange
         - mango
         
+    - name: Print fruit name with quantity
+      debug:
+        msg: Fruit Name - {{ }} , Quantity - {{ }}
+        
+      loop:
+        - { name: "Apple", quantity: 10 }
+        - { name: "Banana", quantity: 9 } 
+        - { name: "Mango", quantity: 10 } 
 # for i in Apple,Banana, do echo $i
